@@ -15,12 +15,15 @@
 -----------------------------------------------------------------------------
 
 module Win32.Raildriver.FFI
-    (c_SetRailSimConnected
+    ( c_SetRailSimConnected
+	, c_GetLocoName
     ) where
 
 import Foreign
-import Foreign.C.Types
+import Foreign.C.String
 
-c_SetRailSimConnected :: Bool -> IO ()
-c_SetRailSimConnected c = undefined
+foreign import ccall unsafe "SetRailSimConnected"
+	c_SetRailSimConnected :: Bool -> IO ()
 
+foreign import ccall unsafe "GetLocoName"
+	c_GetLocoName :: IO CString

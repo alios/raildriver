@@ -20,10 +20,12 @@
 -----------------------------------------------------------------------------
 
 module Win32.Raildriver 
-    (setRailSimConnected
+    ( setRailSimConnected
+    , getLocoName
     ) where
 
 import Win32.Raildriver.FFI
+import Foreign.C.String
 
 
 -- | Connect/Disconnect (based on the argument 'c') to the simulator.
@@ -31,3 +33,5 @@ import Win32.Raildriver.FFI
 setRailSimConnected :: Bool -> IO ()
 setRailSimConnected c = c_SetRailSimConnected c
 
+getLocoName :: IO String
+getLocoName = c_GetLocoName >>= peekCString
