@@ -5,7 +5,7 @@ Get python 3 (32 bit) ([Python](https://www.haskell.org/downloads/windows) for W
 Make sure to take the 32 bit Version, to be able to link to the `raildriver.dll`.
 
 On the Machine that runs your `raildriver.dll` compatible simulator
-(f.e. TrainSimulator 201x) run `connectRaildriver.py`.
+(f.e. TrainSimulator 201x) run `connectRaildriver.py`.)
 
 It will open a tcp port 22222 waiting for incomming connections.
 
@@ -28,6 +28,8 @@ From that on the client will receive update packets, containting a value diction
 but only containing those values which have actually changed since last packet.
 
 If the loco changes it will start again from the beginning.
+
+
 
 
 Configuration
