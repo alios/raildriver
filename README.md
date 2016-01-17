@@ -38,17 +38,12 @@ parameters by editing the `connectRaildriver.py` file.
 
 The following parameters can be changed.
 
-|-----------|--------------------------------------|---------------|
 | variable  | Description                          | Default value |
 |-----------|--------------------------------------|---------------|
 | dllPath   | The location of the `raildirver.dll` | TS default    |
-|-----------|--------------------------------------|---------------|
 | sleepTime | The polling interval                 | 50Hz          |
-|-----------|--------------------------------------|---------------|
 | logLevel  | the log level                        | logging.INFO  |
-|-----------|--------------------------------------|---------------|
 | tcpPort   | the TCP port to listen on            | 22222         |
-|-----------|--------------------------------------|---------------|
 
 
 To change one of these from their default value, you have to add them to the constructor
