@@ -177,7 +177,7 @@ class Raildriver:
         logging.basicConfig(level=logging.INFO)
         logging.info("Starting up Raildriver")
 
-        self.server = RaildriverServer()
+        self.server = RaildriverServer(dllPath = dllPath, sleepTime = sleepTime)
         
         self.s = socket.socket()
         host = socket.gethostname()
@@ -212,7 +212,7 @@ class Raildriver:
                 self.server.clientSocketsLock.release()
                 self.server.dataLock.release()
 
-    def signal_handler(signal, frame):
+    def signal_handler(self, signal, frame):
         self.s.close()
         self.server.running = False
         self.server.join()
