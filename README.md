@@ -60,6 +60,15 @@ def main():
 
 ```
 
+Make sure to quote backslashes `\\`. If you want to change the loglevel like above,
+you have to import the `logging` module at the beginning of the file like:
+
+```python
+
+import logging
+
+```
+
 
 TODO
 ====
